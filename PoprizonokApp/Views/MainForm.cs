@@ -52,10 +52,12 @@ namespace PoprizonokApp
         private void Card_DoubleClick(object sender, EventArgs e)
         {
             AgentCard card = sender as AgentCard;
-            SelectedagentCards.Add(card);
-            AddEditAgentForm agentForm = new AddEditAgentForm();
+            AddEditAgentForm agentForm = new AddEditAgentForm(DBContext.Context.Agent.First(p => p.ID.ToString() == card.IDLbl.Text));
             DialogResult result = agentForm.ShowDialog();
-
+            if (result == DialogResult.OK)
+            {
+               FilteredCart();
+            }
         }
 
         private void FilteredCart()
@@ -136,6 +138,16 @@ namespace PoprizonokApp
             {
                 SearchTextBox.Text = "Введите для поиска:";
                 SearchTextBox.ForeColor = Color.Gainsboro;
+            }
+        }
+
+        private void AddBtn_Click(object sender, EventArgs e)
+        {
+            AddEditAgentForm agentForm = new AddEditAgentForm(null);
+            DialogResult result = agentForm.ShowDialog();
+            if(result == DialogResult.OK)
+            {
+                FilteredCart();
             }
         }
     }

@@ -37,8 +37,10 @@
             this.SearchTextBox = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.AddBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -121,6 +123,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(150)))), ((int)(((byte)(158)))));
+            this.panel2.Controls.Add(this.AddBtn);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.panel2.Location = new System.Drawing.Point(0, 566);
@@ -138,6 +141,17 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1381, 503);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
+            // AddBtn
+            // 
+            this.AddBtn.BackColor = System.Drawing.Color.Magenta;
+            this.AddBtn.Location = new System.Drawing.Point(12, 6);
+            this.AddBtn.Name = "AddBtn";
+            this.AddBtn.Size = new System.Drawing.Size(153, 37);
+            this.AddBtn.TabIndex = 0;
+            this.AddBtn.Text = "Добавить агента";
+            this.AddBtn.UseVisualStyleBackColor = false;
+            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -153,6 +167,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -167,6 +182,7 @@
         private System.Windows.Forms.ComboBox FiltrComboBox;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox SearchTextBox;
+        private System.Windows.Forms.Button AddBtn;
     }
 }
 

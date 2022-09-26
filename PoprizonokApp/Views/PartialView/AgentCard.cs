@@ -21,7 +21,7 @@ namespace PoprizonokApp.Views.PartialView
         public void GenerateDateAgentCard(Agent agent)
         {
             if(agent.Logo != String.Empty)
-            AgentpictureBox.ImageLocation = agent.Logo.Remove(0,1);
+                AgentpictureBox.ImageLocation = agent.Logo;
             TitleandTypeAgentLbl.Text = agent.AgentType.Title.ToString() + " | " + agent.Title.ToString();
             AgetPhoneLbl.Text = agent.Phone.ToString();
             AgentPriorityLbl.Text = "Приоритетность: " + agent.Priority.ToString();
