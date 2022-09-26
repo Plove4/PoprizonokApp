@@ -70,7 +70,7 @@ namespace PoprizonokApp.Views
 
             if(builder.Length > 0)
             {
-                MessageBox.Show(builder.ToString(),"",)
+                MessageBox.Show(builder.ToString(), "");
             }
 
             if (agent.ID == 0)
